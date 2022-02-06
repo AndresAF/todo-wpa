@@ -14,11 +14,11 @@ const { urlencoded } = require("express");
 const express = require("express");
 app.use(morgan("dev"));
 app.use(myConnection(mysql,{
-    host: 'localhost',
-    user:'root',
-    password:'123456',
+    host: 'us-cdbr-east-05.cleardb.net',
+    user:'b2aff2868c0c16',
+    password:'1454ff90',
     port: 3306,
-    database: 'todo'
+    database: 'to-do-personal'
 },'single'))
 app.use(express.urlencoded({extended:false}))
 //routes
@@ -27,3 +27,12 @@ app.use("/", tareasRoutes );
 app.listen(app.get("port"), () => {
     console.log("http:localhost:3000")
 })
+
+
+
+
+// USER b2aff2868c0c16
+
+//  PASSWORD 1454ff90
+
+// HOST us-cdbr-east-05.cleardb.net
