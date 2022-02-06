@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Tareas Pendientes</title>
+</head>
+<style> * {  font-family: 'Sen', sans-serif;;}</style>
+<body>
+    <div class="container mt-5">
+        <h1>EDITA LA TAREA</h1>
+        <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <form action="/update/<%=data.id%>" method="post">
+                    <input class="form-control"type="text" value="<%= data.tarea %>" name="tarea">
+                    <button class="btn btn-primary" type="submit">EDITAR</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

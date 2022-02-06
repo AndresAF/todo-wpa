@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--                                                                 ESTO ES LO QUE LO HACE RESPONSIVO!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Tareas Pendientes</title>
+</head>
+<body>
+    <style> * {  font-family: 'Sen', sans-serif; font-weight: 700 !important;}</style>
+    <div class="container">
+    <h1 class="p-2">TAREAS PENDIENTES</h1>
+
+ 
+  
+
+    <div class="form">
+        <form action="/add" method="post" class="mb-5">
+
+            <input type="text"  id="tarea" class="input m-2"placeholder="agrega una tarea..." name="tarea">
+            <button type="submit" class="btn btn-primary">AGREGAR TAREA</button>
+
+        </form>
+    
+    </div>
+
+    <div class="seccionTareas">
+        <table class="table table-bordered table-hover">
+      
+            <thead>
+                <tr>
+            <th>ID</th>
+            <th>TAREA</th>
+            <th>ESTATUS</th>
+            <th>EDITAR</th>
+                </tr>
+
+
+            </thead>
+
+            <tbody>
+            <% if (data) { %>
+            <% for(i = 0; i < data.length; i++) { %>
+                <!-- ID -->
+            <tr>
+                <td><%= i + 1 %></td>
+                  <!-- TAREA -->
+        
+             <td><h6><%= data[i].tarea %></h6></td>
+             <!-- BOTON PARA QUITAR TAREA -->
+             <td><a href="/delete/<%=data[i].id%>" class="btn btn-success">LISTO</a></td>
+             <!-- BOTON PARA EDITAR TAREA -->
+             <td><a href="/edit/<%=data[i].id%>" class="btn btn-primary">EDITAR</a></td>
+                
+            </tr>
+          
+
+         <%   } %>
+
+           <% } %>
+        </tbody>
+
+
+    </table>
+    </div>
+</div>
+</body>
+</html>
