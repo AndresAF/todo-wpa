@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="manifest" href="/manifest.json">
    <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,12 @@
     <title>Tareas Pendientes</title>
 </head>
 <body>
+    <script>
+        if("ServiceWorker" in navigator){
+            navigator.serviceWorker.register("/service-worker.js")
+
+        }
+    </script>
     <style> * {  font-family: 'Sen', sans-serif; font-weight: 700 !important;}</style>
     <div class="container">
     <h1 class="p-2">TAREAS PENDIENTES</h1>
