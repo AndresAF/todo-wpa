@@ -1,6 +1,6 @@
 {
-    "name": "mostUsedWords",
-    "short_name": "mostUsedWords",
+    "name": "todopersonal",
+    "short_name": "todopersonal",
     "start_url": "./?utm_source=web_app_manifest",
     "display": "fullscreen",
     "icons": [
