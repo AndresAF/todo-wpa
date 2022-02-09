@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <link rel="manifest" href="./manifest.json">
-   <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
+   <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--                                                                 ESTO ES LO QUE LO HACE RESPONSIVO!!! -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=-1, user-scalable=no">
     <title>Tareas Pendientes</title>
 </head>
 <body>
@@ -18,7 +18,9 @@
     </script>
     <style> * {  font-family: 'Sen', sans-serif; font-weight: 700 !important;}</style>
     <div class="container">
-    <h1 class="p-2">TAREAS PENDIENTES</h1>
+        <nav class=" navbar-dark bg-black">
+    <h1 class="p-2" style="margin-left:2%;color:white">TAREAS PENDIENTES</h1>
+    </nav>
 
  
   
@@ -26,7 +28,7 @@
     <div class="form">
         <form action="/add" method="post" class="mb-5">
 
-            <input type="text"  id="tarea" class="input m-2"placeholder="agrega una tarea..." name="tarea">
+            <input type="text"  id="tarea" class="form-control mr-sm-2"placeholder="agrega una tarea..." name="tarea">
             <button type="submit" class="btn btn-primary">AGREGAR TAREA</button>
 
         </form>
