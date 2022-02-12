@@ -1,5 +1,5 @@
 const express = require("express");
-
+const pool = require("../lib/database")
 const router = express.Router();
 
 const controller = require("../controllers/tareasController")

@@ -1,5 +1,6 @@
 var controller = {};
 var alert = require('alert');
+const pool = require("../lib/database")
 
 controller.list = 
     (req,res) => { req.getConnection((err,conn) => {
